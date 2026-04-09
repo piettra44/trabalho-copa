@@ -1,5 +1,7 @@
 /* Fonte global da página */
 body {
+  font-family: Arial, Helvetica, sans-serif; /* Mudei 'Italic' porque não é um nome de fonte padrão */
+}
 
 /* Navbar Amarela */
 .navbar.bg-primary {
@@ -10,7 +12,6 @@ body {
   align-items: center;
 }
 
-/* links */
 /* Links do Menu */
 .nav-link {
   position: relative;
@@ -21,7 +22,6 @@ body {
   transform: scale(1.1);
   color: #000 !important;
   text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
-  
 }
 
 .nav-link::after {
@@ -36,8 +36,7 @@ body {
   transform: translate(-2px) scale(1.05);
 }
 
-
-/* Botao Ingressos */
+/* Botão Ingressos */
 .botao {
   background-color: #3c1dc4;
   color: #000 !important; 
@@ -47,16 +46,14 @@ body {
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-
 }
 
 .botao:hover {
   background: linear-gradient(135deg, #ffc107, #3016a4);
-  transform: translate(-2px) scale(1.05); /* Efeito de elevação */
-
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transform: translate(-2px) scale(1.05);
 }
 
-/* Banner Principal  (Main)*/
 /* Banner Principal */
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/torcida.jpg");
