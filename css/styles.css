@@ -348,3 +348,69 @@ body {
   border-bottom: 1px solid white;
   padding: 5px 0;
 }
+
+.ingressos {
+  background: #eaeaea;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo-ingressos {
+  font-weight: 900;
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+/* GRID DOS CARDS */
+.cards-ingressos {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 60px;
+  justify-content: center;
+}
+
+/* CARD PADRÃO */
+.card-ingresso {
+  background: #0b2c8a;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+/* CARD ROXO (PRIMEIRO) */
+.card-roxo {
+  background: linear-gradient(135deg, #5f5fff, #3c3ccf);
+}
+
+/* TÍTULOS */
+.card-ingresso h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* TEXTOS */
+.card-ingresso p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* LINHA EMBAIXO DOS TEXTOS */
+.card-ingresso p span {
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+}
+
+/* PREÇO */
+.preco {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+/* TEXTO PEQUENO */
+.obs {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
