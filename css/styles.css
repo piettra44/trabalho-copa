@@ -1,0 +1,59 @@
+/* navbar amarela */
+
+.navbar.bg-primary {
+    background-color: #ffc107 !important;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+/* links */
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #000 !important;
+  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
+  
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: 0.3s;
+  transform: translate(-2px) scale(1.05); /* Efeito de elevação */
+}
+
+
+/* Botao Ingressos */
+
+.botao {
+  background-color: #3c1dc4;
+  color: #000 !important; /* Força o texto a ser preto */ 
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+
+}
+
+.botao:hover {
+
+  background: linear-gradient(135deg, #ffc107, #3016a4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Efeito de Elevação */
+  transform: translate(-2px) scale(1.05); /* Efeito de elevação */
+
+}
+
+
