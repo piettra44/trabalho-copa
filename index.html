@@ -41,11 +41,9 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="minhaNavbar">
       <ul class="navbar-nav ms-auto fw-bold">
-
-        <li class="nav-item "><a href="#historia" class="nav-link text-dark m-1 fs-5">História</a></li>
-        <li class="nav-item"><a href="#calendario" class="nav-link text-dark m-1 fs-5">Calendário</a></li>
-        <li class="nav-item"><a href="#equipes" class="nav-link text-dark m-1 fs-5">Equipes</a></li>
-        <li class="nav-item"><a href="#ingressos" class="nav-link text-dark m-1 fs-5">Ingressos</a></li>
+        <li class="nav-item "><a href="#" class="nav-link text-dark m-1 fs-5">História</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark m-1 fs-5">Calendário</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark m-1 fs-5">Equipes</a></li>
         <li class="nav-item"><a href="#" class="botao">Ingressos</a></li>
       </ul>
     </div>
@@ -63,7 +61,7 @@
                 </div>
                 <div class="linha-destaque"></div>
                     <p class="subtitulo">De 11 de junho a 19 de julho de 2026</p>
-                    <p></p>
+                    <i class="bi bi-mouse-fill"></i>
                     <div class="contador">
                         <div><span id="dias">00</span><p>Dias</p></div>
                         <div><span id="horas">00</span><p>Horas</p></div>
@@ -73,11 +71,14 @@
                 </div>
         </section>
     </main>    
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
+</html>
 
 <section class="historia text-center">
-  
-  <h1 class="titulo-história" id="historia" style="font-family: 'Lalezar', cursive; color: #fff; font-size: 5rem; text-shadow: 2px 3px 3px #ffc107; " >HISTÓRIA</h1>
+  <h1 class="titulo-história">HISTÓRIA</h1>
 
   <div class="linha-tempo">
 
@@ -116,7 +117,7 @@
 
 <section class="calendario text-center">
 
-  <h1 class="titulo-calendario" id="calendario">
+  <h1 class="titulo-calendario">
     CALENDÁRIO | COPA DO MUNDO
   </h1>
 
@@ -317,8 +318,73 @@
 
 </section>
 
-<!-- JS Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Construindo slider "Carroussel" do zero -->
+     <div class="container mt-3">
+        <div id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+                <!-- Primeiro item do Carroussel -->
+                <div class="carousel-item active">
+                    <img src="img/carrossel 2.jpg" alt="slide-1" class="d-block w-100">
+                </div>
 
+                <!-- segundo item do Carroussel -->
+                <div class="carousel-item active">
+                    <img src="img/copa do mundo].webp" alt="slide-2" class="d-block w-100">
+                </div>
+
+                <!-- terceiro item do Carroussel -->
+                <div class="carousel-item active">
+                    <img src="img/carrossel 3.jpg" alt="slide-3" class="d-block w-100">
+                </div>
+
+
+            </div>
+
+            <!-- Adicionando botôes de controle de carroussel -->
+
+
+            <!-- botão de retorno -->
+             <button class="carousel-control-prev" type="button" 
+             data-bs-target="#carouselExemplo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+             </button>
+
+            <!-- botão de avançar -->
+             <button class="carousel-control-next" type="button" 
+             data-bs-target="#carouselExemplo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+             </button>
+            
+
+        </div>
+     </div>
+     <footer class="rodape">
+
+  <div class="container-rodape">
+
+    <h2>Copa do Mundo 2026</h2>
+
+    <p>Site informativo sobre a Copa do Mundo</p>
+
+    <div class="links">
+      <a href="#">História</a>
+      <a href="#">Calendário</a>
+      <a href="#">Equipes</a>
+      <a href="#">Ingressos</a>
+    </div>
+
+    <div class="redes">
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-twitter-x"></i>
+      <i class="bi bi-youtube"></i>
+    </div>
+
+    <p class="copy">© 2026 Copa do Mundo - Todos os direitos reservados</p>
+
+  </div>
+
+</footer>
+  
 </body>
 </html>
