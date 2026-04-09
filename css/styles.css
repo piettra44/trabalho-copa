@@ -118,21 +118,21 @@
 
 /* Caixas individuais de cada tempo */
 .contador div {
-  background: rgba(11, 44, 138, 0.7); /* Azul escuro translúcido */
-  backdrop-filter: blur(8px); /* Efeito de vidro embaçado (Glassmorphism) */
-  border: 2px solid #ffc107; /* Borda amarela combinando com a Navbar */
-  border-radius: 15px; /* Cantos arredondados modernos */
+  background: rgba(11, 44, 138, 0.7); 
+  backdrop-filter: blur(8px); 
+  border: 2px solid #ffc107; /* Borda amarela */
+  border-radius: 15px;
   padding: 15px 20px;
-  min-width: 120px; /* Largura mínima para ficarem do mesmo tamanho */
+  min-width: 120px; 
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante */
-  transition: transform 0.3s ease; /* Prepara a animação do hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+  transition: transform 0.3s ease;
 }
 
 /* Efeito ao passar o mouse */
 .contador div:hover {
   transform: translateY(-5px); /* Dá um leve pulo para cima */
-  border-color: #fff; /* Borda fica branca no hover */
+  border-color: #fff; 
 }
 
 /* Os números */
@@ -155,11 +155,6 @@
   letter-spacing: 2px; /* Espaçamento entre as letras para ficar mais sofisticado */
 }
 
-.mouse {
-  width: 60px;
-  margin-top: 2rem;
-  opacity: 0.8;
-}
 
 #historia {
   scroll-margin-top: 100px;
@@ -172,10 +167,9 @@
   padding: 60px 20px;
 }
 
-.titulo {
+.titulo-historia {
   font-weight: 900;
   margin-bottom: 60px;
-  padd
 }
 
 .linha-tempo {
@@ -183,6 +177,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 100px;
 }
 
 .linha-tempo::before {
@@ -194,6 +189,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  box-shadow: 0px 5px 12px 3px #ffc107;
 }
 
 .evento {
@@ -238,6 +234,11 @@
 }
 body {
   font-family: Italic, sans-serif;
+}
+
+#calendario {
+  scroll-margin-top: 150px;
+  margin-top: 30px;
 }
 
 .calendario {
