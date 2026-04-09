@@ -1,15 +1,17 @@
-/* navbar amarela */
+/* Fonte global da página */
+body {
 
+/* Navbar Amarela */
 .navbar.bg-primary {
-    background-color: #ffc107 !important;
+  background-color: #ffc107 !important;
 }
-
 
 .navbar-nav {
   align-items: center;
 }
 
 /* links */
+/* Links do Menu */
 .nav-link {
   position: relative;
   transition: 0.3s;
@@ -31,15 +33,14 @@
   height: 2px;
   background-color: black;
   transition: 0.3s;
-  transform: translate(-2px) scale(1.05); /* Efeito de elevação */
+  transform: translate(-2px) scale(1.05);
 }
 
 
 /* Botao Ingressos */
-
 .botao {
   background-color: #3c1dc4;
-  color: #000 !important; /* Força o texto a ser preto */ 
+  color: #000 !important; 
   padding: 0.6rem 1rem;
   border-radius: 5px;
   font-weight: 700;
@@ -50,14 +51,13 @@
 }
 
 .botao:hover {
-
   background: linear-gradient(135deg, #ffc107, #3016a4);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Efeito de Elevação */
   transform: translate(-2px) scale(1.05); /* Efeito de elevação */
 
 }
 
 /* Banner Principal  (Main)*/
+/* Banner Principal */
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/torcida.jpg");
   background-size: cover;
@@ -77,16 +77,14 @@
   font-family: 'Lalezar', cursive;
   font-size: 6rem;
   color: #fff;
-  text-shadow: 2px 3px 3px #ffc107;
+  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
 }
 
 .numero {
   font-family: 'Lalezar', cursive;
   font-size: 6rem;
   color: #ffc107;
-  margin-top: -10px; /* aproxima do título */
-  text-shadow: 2px 3px 3px #fff
-
+  margin-top: -10px;
 }
 
 .linha-destaque {
@@ -94,7 +92,7 @@
   height: 3px;
   background-color: #fff;
   margin: 1rem auto;
-  margin-left: 0; /* Alinha à esquerda */
+  margin-left: 0;
 }
 
 .subtitulo {
@@ -104,58 +102,59 @@
   margin-bottom: 2rem;
   text-shadow: 1.5px 3px 3px #000;
   text-align: left;
-  text-shadow: 2px 3px 3px #ffc107
 }
 
-/* Container do cronômetro */
+.mouse {
+  width: 60px;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* === CRONÔMETRO ATUALIZADO (Glassmorphism) === */
 .contador {
   display: flex;
-  gap: 20px; /* Distância entre as caixinhas */
+  gap: 20px;
   justify-content: flex-start;
   margin-top: 2rem;
-  flex-wrap: wrap; /* Garante que não quebre no celular */
+  flex-wrap: wrap; 
 }
 
-/* Caixas individuais de cada tempo */
 .contador div {
   background: rgba(11, 44, 138, 0.7); 
   backdrop-filter: blur(8px); 
-  border: 2px solid #ffc107; /* Borda amarela */
-  border-radius: 15px;
+  border: 2px solid #ffc107; 
+  border-radius: 15px; 
   padding: 15px 20px;
   min-width: 120px; 
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; 
 }
 
-/* Efeito ao passar o mouse */
 .contador div:hover {
-  transform: translateY(-5px); /* Dá um leve pulo para cima */
+  transform: translateY(-5px); 
   border-color: #fff; 
 }
 
-/* Os números */
 .contador span {
   font-size: 3.5rem;
   font-weight: 900;
-  color: #ffc107; /* Deixa os números em amarelo para destacar */
+  color: #ffc107; 
   display: block;
-  line-height: 1; /* Tira espaços extras em cima/baixo do número */
+  line-height: 1; 
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-/* O texto (Dias, Horas, etc) */
 .contador p {
   margin: 10px 0 0 0;
   font-size: 1.2rem;
-  font-family: 'Lalezar', cursive; /* Mantendo sua fonte customizada */
-  color: #fff; /* Texto branco */
-  text-transform: uppercase; /* Deixa tudo em maiúsculo */
-  letter-spacing: 2px; /* Espaçamento entre as letras para ficar mais sofisticado */
+  font-family: 'Lalezar', cursive; 
+  color: #fff; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
 }
 
-
+/* === SEÇÃO DE HISTÓRIA E LINHA DO TEMPO === */
 #historia {
   scroll-margin-top: 100px;
   min-height: 80vh;
@@ -167,19 +166,21 @@
   padding: 60px 20px;
 }
 
-.titulo-historia {
+.historia .titulo {
   font-weight: 900;
   margin-bottom: 60px;
 }
 
+/* Afastando a linha do título para não sobrepor (O que arrumou 1954) */
 .linha-tempo {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 100px; 
 }
 
+/* A Linha Horizontal Principal + Sombra Amarela */
 .linha-tempo::before {
   content: "";
   position: absolute;
@@ -189,17 +190,18 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  box-shadow: 0px 5px 12px 3px #ffc107;
+  box-shadow: 0px 5px 12px 3px #ffc107; /* Sombra amarela intensa! */
 }
 
+/* Ajuste de tamanho para caber o ano inteiro */
 .evento {
-  width: 180px; /* Aumentado um pouco para dar mais espaço */
+  width: 180px; 
   position: relative;
 }
 
 .evento h2 {
   font-weight: 900;
-  white-space: nowrap; /* Força o título a ficar em uma única linha */
+  white-space: nowrap; /* Impede o "1942-1946" de quebrar de linha */
 }
 
 .topo {
@@ -210,11 +212,12 @@
   transform: translateY(80px);
 }
 
-/* Regra separada para corrigir o erro de sintaxe do aninhamento */
+/* Margem separada para corrigir erro antigo de sintaxe */
 .evento.baixo h2 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
+/* Marcadores verticais da linha do tempo + Sombra Amarela */
 .evento::after {
   content: "";
   position: absolute;
@@ -223,6 +226,7 @@
   background: black;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 0px 3px 8px 1px #ffc107; /* Acompanhando a linha principal */
 }
 
 .topo::after {
@@ -232,15 +236,8 @@
 .baixo::after {
   bottom: 100%;
 }
-body {
-  font-family: Italic, sans-serif;
-}
 
-#calendario {
-  scroll-margin-top: 150px;
-  margin-top: 30px;
-}
-
+/* === SEÇÃO DE CALENDÁRIO === */
 .calendario {
   background: #ffcc00;
   padding: 60px 20px;
@@ -301,7 +298,6 @@ body {
 
 
 
-
 .equipes {
   background: #0b2c8a;
   padding: 60px 20px;
@@ -348,4 +344,70 @@ body {
 .card-equipe li {
   border-bottom: 1px solid white;
   padding: 5px 0;
+}
+
+.ingressos {
+  background: #eaeaea;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo-ingressos {
+  font-weight: 900;
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+/* GRID DOS CARDS */
+.cards-ingressos {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 60px;
+  justify-content: center;
+}
+
+/* CARD PADRÃO */
+.card-ingresso {
+  background: #0b2c8a;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+/* CARD ROXO (PRIMEIRO) */
+.card-roxo {
+  background: linear-gradient(135deg, #5f5fff, #3c3ccf);
+}
+
+/* TÍTULOS */
+.card-ingresso h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* TEXTOS */
+.card-ingresso p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* LINHA EMBAIXO DOS TEXTOS */
+.card-ingresso p span {
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+}
+
+/* PREÇO */
+.preco {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+/* TEXTO PEQUENO */
+.obs {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.8;
 }
