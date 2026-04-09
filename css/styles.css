@@ -296,3 +296,55 @@ body {
 .destaque {
   background: #f5f0d0;
 }
+
+
+
+
+
+.equipes {
+  background: #0b2c8a;
+  padding: 60px 20px;
+}
+
+.titulo-equipes {
+  color: white;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.cards-equipes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card-equipe {
+  background: #d4af37;
+  width: 250px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  color: white;
+}
+
+.card-equipe img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-equipe h3 {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.card-equipe ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-equipe li {
+  border-bottom: 1px solid white;
+  padding: 5px 0;
+}
