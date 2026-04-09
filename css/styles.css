@@ -74,7 +74,7 @@ body {
   font-family: 'Lalezar', cursive;
   font-size: 6rem;
   color: #fff;
-  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
+  text-shadow: 2px 3px 3px #ffc107;
 }
 
 .numero {
@@ -82,6 +82,7 @@ body {
   font-size: 6rem;
   color: #ffc107;
   margin-top: -10px;
+  text-shadow: 2px 3px 3px #fff;
 }
 
 .linha-destaque {
@@ -99,6 +100,7 @@ body {
   margin-bottom: 2rem;
   text-shadow: 1.5px 3px 3px #000;
   text-align: left;
+  text-shadow: 2px 3px 3px #ffc107;
 }
 
 .mouse {
@@ -154,27 +156,29 @@ body {
 /* === SEÇÃO DE HISTÓRIA E LINHA DO TEMPO === */
 #historia {
   scroll-margin-top: 100px;
-  min-height: 80vh;
-  padding: 80px 20px;
+  /* min-height: 30vh; */
+  padding: 30px 20px 0 20px;
 }
 
 .historia {
   background: linear-gradient(#f5e6a1, #e8d48a);
   padding: 60px 20px;
+
 }
 
-.historia .titulo {
+.titulo-historia {
   font-weight: 900;
   margin-bottom: 60px;
 }
 
 /* Afastando a linha do título para não sobrepor (O que arrumou 1954) */
-.linha-tempo {
+.linha-tempo { 
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px; 
+  margin-top: 120px; 
+  margin-bottom: 100px;
 }
 
 /* A Linha Horizontal Principal + Sombra Amarela */
@@ -238,6 +242,7 @@ body {
 .calendario {
   background: #ffcc00;
   padding: 60px 20px;
+  /* margin-top: ;20px; */
 }
 
 .titulo-calendario {
