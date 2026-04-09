@@ -4,6 +4,7 @@
     background-color: #ffc107 !important;
 }
 
+
 .navbar-nav {
   align-items: center;
 }
@@ -56,4 +57,80 @@
 
 }
 
+/* Banner Principal  (Main)*/
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/torcida.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+}
 
+.titulo-container {
+  text-align: left;
+}
+
+.titulo {
+  font-family: 'Lalezar', cursive;
+  font-size: 6rem;
+  color: #fff;
+  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
+}
+
+.numero {
+  font-family: 'Lalezar', cursive;
+  font-size: 6rem;
+  color: #ffc107;
+  margin-top: -10px; /* aproxima do título */
+
+}
+
+.linha-destaque {
+  width: 600px;
+  height: 3px;
+  background-color: #fff;
+  margin: 1rem auto;
+  margin-left: 0; /* Alinha à esquerda */
+}
+
+.subtitulo {
+  font-family: 'Lalezar', cursive;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 1.5px 3px 3px #000;
+  text-align: left;
+}
+
+.contador {
+  display: flex;
+  gap: 50px;
+  justify-content: left;
+  margin-top: 1rem;
+}
+
+.contador div {
+  text-align: center;
+  color: #fff;
+}
+
+.contador span {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+}
+
+.contador p {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Lalezar', cursive;
+}
+
+.mouse {
+  width: 60px;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
