@@ -77,7 +77,7 @@
   font-family: 'Lalezar', cursive;
   font-size: 6rem;
   color: #fff;
-  text-shadow: 2px 3px 3px rgba(18, 18, 18, 0.8);
+  text-shadow: 2px 3px 3px #ffc107;
 }
 
 .numero {
@@ -85,6 +85,7 @@
   font-size: 6rem;
   color: #ffc107;
   margin-top: -10px; /* aproxima do título */
+  text-shadow: 2px 3px 3px #fff
 
 }
 
@@ -103,36 +104,67 @@
   margin-bottom: 2rem;
   text-shadow: 1.5px 3px 3px #000;
   text-align: left;
+  text-shadow: 2px 3px 3px #ffc107
 }
 
+/* Container do cronômetro */
 .contador {
   display: flex;
-  gap: 50px;
-  justify-content: left;
-  margin-top: 1rem;
+  gap: 20px; /* Distância entre as caixinhas */
+  justify-content: flex-start;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Garante que não quebre no celular */
 }
 
+/* Caixas individuais de cada tempo */
 .contador div {
+  background: rgba(11, 44, 138, 0.7); /* Azul escuro translúcido */
+  backdrop-filter: blur(8px); /* Efeito de vidro embaçado (Glassmorphism) */
+  border: 2px solid #ffc107; /* Borda amarela combinando com a Navbar */
+  border-radius: 15px; /* Cantos arredondados modernos */
+  padding: 15px 20px;
+  min-width: 120px; /* Largura mínima para ficarem do mesmo tamanho */
   text-align: center;
-  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante */
+  transition: transform 0.3s ease; /* Prepara a animação do hover */
 }
 
+/* Efeito ao passar o mouse */
+.contador div:hover {
+  transform: translateY(-5px); /* Dá um leve pulo para cima */
+  border-color: #fff; /* Borda fica branca no hover */
+}
+
+/* Os números */
 .contador span {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffc107; /* Deixa os números em amarelo para destacar */
   display: block;
+  line-height: 1; /* Tira espaços extras em cima/baixo do número */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
+/* O texto (Dias, Horas, etc) */
 .contador p {
-  margin: 0;
-  font-size: 2rem;
-  font-family: 'Lalezar', cursive;
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+  font-family: 'Lalezar', cursive; /* Mantendo sua fonte customizada */
+  color: #fff; /* Texto branco */
+  text-transform: uppercase; /* Deixa tudo em maiúsculo */
+  letter-spacing: 2px; /* Espaçamento entre as letras para ficar mais sofisticado */
 }
 
 .mouse {
   width: 60px;
   margin-top: 2rem;
   opacity: 0.8;
+}
+
+#historia {
+  scroll-margin-top: 100px;
+  min-height: 80vh;
+  padding: 80px 20px;
 }
 
 .historia {
@@ -143,6 +175,7 @@
 .titulo {
   font-weight: 900;
   margin-bottom: 60px;
+  padd
 }
 
 .linha-tempo {
@@ -164,12 +197,13 @@
 }
 
 .evento {
-  width: 150px;
+  width: 180px; /* Aumentado um pouco para dar mais espaço */
   position: relative;
 }
 
 .evento h2 {
   font-weight: 900;
+  white-space: nowrap; /* Força o título a ficar em uma única linha */
 }
 
 .topo {
@@ -178,9 +212,11 @@
 
 .baixo {
   transform: translateY(80px);
-  .evento.baixo h2 {
-  margin-top: 20px;
 }
+
+/* Regra separada para corrigir o erro de sintaxe do aninhamento */
+.evento.baixo h2 {
+  margin-top: 10px;
 }
 
 .evento::after {
