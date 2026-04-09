@@ -163,6 +163,7 @@ body {
 .titulo-historia {
   font-weight: 900;
   margin-bottom: 60px;
+  
 }
 
 /* Afastando a linha do título para não sobrepor (O que arrumou 1954) */
@@ -412,4 +413,57 @@ body {
   font-size: 14px;
   margin-top: 10px;
   opacity: 0.8;
+}
+.rodape {
+  background: #0b2c8a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container-rodape h2 {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.container-rodape p {
+  margin: 5px 0;
+}
+
+/* LINKS */
+.links {
+  margin: 20px 0;
+}
+
+.links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* REDES SOCIAIS */
+.redes {
+  margin: 20px 0;
+}
+
+.redes i {
+  font-size: 22px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.redes i:hover {
+  transform: scale(1.2);
+}
+
+/* COPYRIGHT */
+.copy {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 20px;
 }
