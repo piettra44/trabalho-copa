@@ -134,3 +134,129 @@
   margin-top: 2rem;
   opacity: 0.8;
 }
+
+.historia {
+  background: linear-gradient(#f5e6a1, #e8d48a);
+  padding: 60px 20px;
+}
+
+.titulo {
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.linha-tempo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linha-tempo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: black;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.evento {
+  width: 150px;
+  position: relative;
+}
+
+.evento h2 {
+  font-weight: 900;
+}
+
+.topo {
+  transform: translateY(-80px);
+}
+
+.baixo {
+  transform: translateY(80px);
+  .evento.baixo h2 {
+  margin-top: 20px;
+}
+}
+
+.evento::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topo::after {
+  top: 100%;
+}
+
+.baixo::after {
+  bottom: 100%;
+}
+body {
+  font-family: Italic, sans-serif;
+}
+
+.calendario {
+  background: #ffcc00;
+  padding: 60px 20px;
+}
+
+.titulo-calendario {
+  font-weight: 900;
+  color: #0b2c8a;
+  margin-bottom: 10px;
+}
+
+.linha {
+  width: 60%;
+  height: 4px;
+  background: #0b2c8a;
+  margin: 10px auto 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-cal {
+  background: #eaeaea;
+  width: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-cal h3 {
+  color: #0b2c8a;
+  border-bottom: 3px solid #0b2c8a;
+  padding-bottom: 10px;
+  font-weight: 900;
+}
+
+.card-cal img {
+  width: 100px;
+  margin: 15px 0;
+}
+
+.card-cal p {
+  font-size: 14px;
+}
+
+.card-cal span {
+  font-size: 12px;
+}
+
+.destaque {
+  background: #f5f0d0;
+}
