@@ -219,6 +219,10 @@ body {
 .baixo::after { bottom: 100%; }
 
 /* === SEÇÃO DE CALENDÁRIO === */
+#calendario {
+  scroll-margin-top: 100px;
+}
+
 .calendario {
   background: #ffcc00;
   padding: 60px 20px;
@@ -259,6 +263,20 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card-cal h3 {
+  color: #0b2c8a;
+  border-bottom: 3px solid #0b2c8a;
+  padding-bottom: 10px;
+  font-weight: 900;
+
+  transition: 0.3s;
+}
+
+/* quando passar o mouse no CARD */
+.card-cal:hover h3 {
+  box-shadow: 0 4px 10px #0b2c8a;
+}
+
 .cal-title {
   font-family: 'Lalezar', cursive; 
   font-size: 30px;
@@ -292,6 +310,10 @@ body {
 .destaque { background: #f5f0d0; }
 
 /* === SEÇÃO EQUIPES === */
+#equipes {
+  scroll-margin-top: 100px;
+}
+
 .equipes {
   background: #0b2c8a;
   padding: 60px 20px;
@@ -352,6 +374,10 @@ body {
 }
 
 /* === SEÇÃO INGRESSOS === */
+#ingressos {
+  scroll-margin-top: 100px;
+}
+
 .ingressos {
   background: #eaeaea;
   padding: 80px 20px;
