@@ -90,7 +90,7 @@ body {
 }
 
 .linha-destaque {
-  max-width: 600px; /* Alterado para max-width */
+  max-width: 600px;
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -120,7 +120,7 @@ body {
   border: 2px solid #ffc107; 
   border-radius: 15px; 
   padding: 15px 20px;
-  flex: 1 1 100px; /* Flexível */
+  flex: 1 1 100px; 
   max-width: 150px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
@@ -133,7 +133,7 @@ body {
 }
 
 .contador span {
-  font-size: 3rem; /* Reduzido levemente */
+  font-size: 3rem; 
   font-weight: 900;
   color: #ffc107; 
   display: block;
@@ -219,10 +219,6 @@ body {
 .baixo::after { bottom: 100%; }
 
 /* === SEÇÃO DE CALENDÁRIO === */
-#calendario {
-  scroll-margin-top: 100px;
-}
-
 .calendario {
   background: #ffcc00;
   padding: 60px 20px;
@@ -263,20 +259,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-cal h3 {
-  color: #0b2c8a;
-  border-bottom: 3px solid #0b2c8a;
-  padding-bottom: 10px;
-  font-weight: 900;
-
-  transition: 0.3s;
-}
-
-/* quando passar o mouse no CARD */
-.card-cal:hover h3 {
-  box-shadow: 0 4px 10px #0b2c8a;
-}
-
 .cal-title {
   font-family: 'Lalezar', cursive; 
   font-size: 30px;
@@ -309,75 +291,90 @@ body {
 
 .destaque { background: #f5f0d0; }
 
-/* === SEÇÃO EQUIPES === */
-#equipes {
-  scroll-margin-top: 100px;
-}
-
+/* === SEÇÃO EQUIPES (LAYOUT LADO A LADO) === */
 .equipes {
   background: #0b2c8a;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .titulo-equipes {
   color: white;
-  font-weight: 900;
+  font-family: 'Lalezar', cursive;
   font-size: 50px;
   margin-bottom: 50px;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 .cards-equipes {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  /* Cria os cards ocupando bastante espaço na tela */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card-equipe {
   background: #d4af37;
-  width: 100%;
-  max-width: 280px;
   border-radius: 20px;
-  padding: 20px;
+  overflow: hidden;
   text-align: left;
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Flexbox para colocar imagem e conteúdo lado a lado */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .card-equipe:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.card-equipe img {
-  width: 100%;
-  height: 150px;
+/* Imagem na esquerda */
+.img-lado {
+  width: 40%;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+}
+
+/* Conteúdo na direita */
+.card-conteudo {
+  width: 60%;
+  padding: 25px;
+  background: linear-gradient(135deg, #d4af37, #c49d28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-equipe h3 {
   font-weight: 900;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 
+/* Lista dividida em 2 colunas para economizar espaço vertical */
 .card-equipe ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 15px;
 }
 
 .card-equipe li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 /* === SEÇÃO INGRESSOS === */
-#ingressos {
-  scroll-margin-top: 100px;
-}
-
 .ingressos {
   background: #eaeaea;
   padding: 80px 20px;
@@ -392,7 +389,6 @@ body {
 
 .cards-ingressos {
   display: grid;
-  /* Cria colunas que se adaptam automaticamente ao tamanho da tela */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   max-width: 1200px;
@@ -411,63 +407,24 @@ body {
   background: linear-gradient(135deg, #5f5fff, #3c3ccf);
 }
 
-.card-ingresso h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.card-ingresso p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.card-ingresso p span {
-  border-bottom: 2px solid white;
-  padding-bottom: 3px;
-}
-
-.preco {
-  font-size: 22px;
-  font-weight: 900;
-  margin-top: 30px;
-}
-
-.obs {
-  font-size: 14px;
-  margin-top: 10px;
-  opacity: 0.8;
-}
+.card-ingresso h3 { font-size: 22px; font-weight: 700; margin-bottom: 30px; }
+.card-ingresso p { font-size: 18px; margin: 10px 0; }
+.card-ingresso p span { border-bottom: 2px solid white; padding-bottom: 3px; }
+.preco { font-size: 22px; font-weight: 900; margin-top: 30px; }
+.obs { font-size: 14px; margin-top: 10px; opacity: 0.8; }
 
 /* === RODAPÉ === */
-.rodape {
-  background: #0b2c8a;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
+.rodape { background: #0b2c8a; color: white; padding: 40px 20px; text-align: center; }
 .container-rodape h2 { font-weight: 900; margin-bottom: 10px; }
 .links { margin: 20px 0; }
 .links a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 10px;
+  color: white; margin: 0 10px; text-decoration: none; font-weight: 500; display: inline-block; margin-bottom: 10px;
 }
 .links a:hover { text-decoration: underline; }
 .redes { margin: 20px 0; }
-.redes i {
-  font-size: 22px;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
+.redes i { font-size: 22px; margin: 0 10px; cursor: pointer; transition: transform 0.2s; }
 .redes i:hover { transform: scale(1.2); }
 .copy { font-size: 14px; opacity: 0.7; margin-top: 20px; }
-
 
 /* =========================================================
    MEDIA QUERIES - GARANTINDO 100% DE RESPONSIVIDADE 
@@ -480,56 +437,44 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Títulos e Textos Gerais */
   .titulo { font-size: 3.5rem; }
   .numero { font-size: 3.5rem; }
   .subtitulo { font-size: 1.2rem; }
   .titulo-historia { font-size: 50px; }
   .titulo-calendario, .titulo-ingressos, .titulo-equipes { font-size: 35px; }
 
-  .contador div {
-    padding: 10px;
-    min-width: 80px;
-  }
+  .contador div { padding: 10px; min-width: 80px; }
   .contador span { font-size: 2rem; }
   .contador p { font-size: 0.8rem; }
 
   /* Adaptando a Linha do Tempo para a Vertical no Celular */
-  .linha-tempo {
-    flex-direction: column;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    gap: 30px;
-  }
-  
-  /* Linha mestra vira vertical */
-  .linha-tempo::before {
-    width: 4px;
-    height: 100%;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-  }
-
-  .evento {
-    width: 80%;
-    transform: none !important; /* Reseta as subidas/descidas */
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 2; /* Fica acima da linha */
-  }
-
+  .linha-tempo { flex-direction: column; margin-top: 40px; margin-bottom: 40px; gap: 30px; }
+  .linha-tempo::before { width: 4px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+  .evento { width: 80%; transform: none !important; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 2; }
   .evento.baixo h2 { margin-top: 0; }
-  
-  /* Esconde os marcadores verticais no mobile */
   .evento::after { display: none; } 
+
+  /* Adaptando a Seção de Equipes para Celular: Empilha imagem em cima e texto embaixo */
+  .cards-equipes {
+    grid-template-columns: 1fr;
+  }
+  .card-equipe {
+    flex-direction: column;
+  }
+  .img-lado {
+    width: 100%;
+    height: 180px; /* Altura fixa pra não ficar gigante no celular */
+  }
+  .card-conteudo {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .titulo { font-size: 2.8rem; }
   .numero { font-size: 2.8rem; }
-  .card-equipe img { height: 120px; }
   .cal-title { font-size: 24px; }
+  /* No celular muito pequeno, volta a ser 1 coluna de texto pra não esmagar as palavras */
+  .card-equipe ul { grid-template-columns: 1fr; }
 }
