@@ -18,3 +18,6 @@
       document.querySelector(".contador").innerHTML = "<h2 style='color:#ffc107;'>A Copa começou!</h2>";
     }
   }, 1000);
+
+  
+  
