@@ -277,6 +277,12 @@ body {
   border-bottom: 3px solid #0b2c8a;
   padding-bottom: 10px;
   font-weight: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-cal:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card-cal img {
@@ -292,14 +298,11 @@ body {
   font-size: 12px;
 }
 
-
-
 .destaque {
   background: #f5f0d0;
 }
 
-
-
+/* Seção de Equipes */
 
 .equipes {
   background: #0b2c8a;
@@ -326,6 +329,12 @@ body {
   padding: 20px;
   text-align: left;
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-equipe:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card-equipe img {
@@ -361,7 +370,8 @@ body {
   margin-bottom: 60px;
 }
 
-/* GRID DOS CARDS */
+/* GRID DOS CARDS Ingressos */
+
 .cards-ingressos {
   display: grid;
   grid-template-columns: repeat(2, 300px);

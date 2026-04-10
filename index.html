@@ -21,6 +21,9 @@
     <script src="js/bootstrap.js" defer></script>
   <!-- Fontes google -->
   <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -41,10 +44,10 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="minhaNavbar">
       <ul class="navbar-nav ms-auto fw-bold">
-        <li class="nav-item "><a href="#" class="nav-link text-dark m-1 fs-5">História</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-dark m-1 fs-5">Calendário</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-dark m-1 fs-5">Equipes</a></li>
-        <li class="nav-item"><a href="#" class="botao">Ingressos</a></li>
+        <li class="nav-item "><a href="#historia" class="nav-link text-dark m-1 fs-5">História</a></li>
+        <li class="nav-item"><a href="#calendario" class="nav-link text-dark m-1 fs-5">Calendário</a></li>
+        <li class="nav-item"><a href="#equipes" class="nav-link text-dark m-1 fs-5">Equipes</a></li>
+        <li class="nav-item"><a href="#ingressos" class="botao">Ingressos</a></li>
       </ul>
     </div>
 
@@ -78,7 +81,7 @@
 </html>
 
 <section class="historia text-center">
-  <h1 class="titulo-história">HISTÓRIA</h1>
+  <h1 class="titulo-história" id="historia" style="font-family: 'Lalezar', cursive; color: #fff; font-size: 70px; text-shadow: #ffc107 4px 4px 7px;">HISTÓRIA</h1>
 
   <div class="linha-tempo">
 
@@ -115,7 +118,7 @@
   </div>
 </section>
 
-<section class="calendario text-center">
+<section class="calendario text-center" id="calendario">
 
   <h1 class="titulo-calendario">
     CALENDÁRIO | COPA DO MUNDO
@@ -128,42 +131,42 @@
     <div class="card-cal">
       <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">ABERTURA</h3>
       <img src="img/logo.png">
-      <p><strong>JOGOS DE ABERTURA</strong></p>
-      <span>DATA: 11 DE JUNHO 2026</span>
+      <p><strong style="font-family: 'Josefin Sans', sans-serif;">JOGOS DE ABERTURA</strong></p>
+      <span style="font-family: 'Cabin', sans-serif;">DATA: 11 DE JUNHO 2026</span>
     </div>
 
     <div class="card-cal">
       <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">OITAVAS DE FINAL</h3>
       <img src="img/bolanumero16.png">
-      <p><strong>16 MELHORES SELEÇÕES</strong><br>16 JOGOS ELIMINATÓRIOS</p>
-      <span>DATA: 28 JUN A 09 JUL 2026</span>
+      <p><strong style="font-family: 'Josefin Sans', sans-serif;">16 MELHORES SELEÇÕES</strong><br>JOGOS ELIMINATÓRIOS</p>
+      <span style="font-family: 'Cabin', sans-serif;">DATA: 28 JUN A 09 JUL 2026</span>
     </div>
 
     <div class="card-cal">
       <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">QUARTAS DE FINAL</h3>
       <img src="img/bolanumero08.png">
-      <p><strong>OITO MELHORES</strong><br>DUELOS DECISIVOS</p>
-      <span>DATA: 4 A 5 DE JULHO 2026</span>
+      <p><strong style="font-family: 'Josefin Sans', sans-serif;">OITO MELHORES</strong><br>DUELOS DECISIVOS</p>
+      <span style="font-family: 'Cabin', sans-serif;">DATA: 4 A 5 DE JULHO 2026</span>
     </div>
 
     <div class="card-cal">
       <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">SEMIFINAL</h3>
       <img src="img/arena_foto-removebg-preview.png">
-      <p><strong>QUATRO MELHORES</strong><br>CAMINHO PARA A FINAL</p>
-      <span>DATA: 8 E 9 DE JULHO 2026</span>
+      <p><strong style="font-family: 'Josefin Sans', sans-serif;">QUATRO MELHORES</strong><br>CAMINHO PARA A FINAL</p>
+      <span style="font-family: 'Cabin', sans-serif;">DATA: 8 E 9 DE JULHO 2026</span>
     </div>
 
     <div class="card-cal destaque">
       <h3 style="font-family: 'Lalezar', cursive; font-size: 35px; text-shadow: #ffc107 2px 2px 5px;">FINAL</h3>
       <img src="img/logo.png">
-      <p><strong>GRANDE FINAL</strong></p>
-      <span>DATA: 14 DE JULHO 2026</span>
+      <p><strong style="font-family: 'Josefin Sans', sans-serif;">GRANDE FINAL</strong></p>
+      <span style="font-family: 'Cabin', sans-serif;">DATA: 14 DE JULHO 2026</span>
     </div>
 
   </div>
 
 </section>
-<section class="equipes text-center">
+<section class="equipes text-center" id="equipes">
 
   <h1 class="titulo-equipes">EQUIPES</h1>
 
@@ -280,7 +283,7 @@
 
 </section>
 
-<section class="ingressos">
+<section class="ingressos" id="ingressos">
 
   <h1 class="titulo-ingressos">INGRESSOS</h1>
 
