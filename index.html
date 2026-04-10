@@ -6,175 +6,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Copa do Mundo 2026</title>
 
-  <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- JS -->
-    <script src="js/bootstrap.js" defer></script>
-  <!-- Fontes google -->
   <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
-<!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
   <div class="container">
     
-    <!-- Logo -->
     <a href="#" class="navbar-brand">
       <img src="img/logo.png" alt="Logo da Copa" style="max-width: 50px;">
     </a>
 
-    <!-- Botão hamburguer (some no desktop) -->
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#minhaNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu -->
     <div class="collapse navbar-collapse" id="minhaNavbar">
       <ul class="navbar-nav ms-auto fw-bold">
         <li class="nav-item "><a href="#historia" class="nav-link text-dark m-1 fs-5">História</a></li>
         <li class="nav-item"><a href="#calendario" class="nav-link text-dark m-1 fs-5">Calendário</a></li>
         <li class="nav-item"><a href="#equipes" class="nav-link text-dark m-1 fs-5">Equipes</a></li>
-        <li class="nav-item"><a href="#ingressos" class="botao">Ingressos</a></li>
+        <li class="nav-item"><a href="#ingressos" class="botao ms-lg-2 mt-2 mt-lg-0 text-center">Ingressos</a></li>
       </ul>
     </div>
 
   </div>
 </nav>
 
-    <main>
-            <section class="banner">
+<main>
+  <section class="banner">
+    <div class="container conteudo-banner">
+      <div class="titulo-container">
+        <h1 class="titulo">Copa do Mundo</h1>
+        <h1 class="numero">2026</h1>
+      </div>
+      <div class="linha-destaque"></div>
+      <p class="subtitulo">De 11 de junho a 19 de julho de 2026</p>
+      <i class="bi bi-mouse-fill text-white fs-2"></i>
+      <div class="contador">
+        <div><span id="dias">00</span><p>Dias</p></div>
+        <div><span id="horas">00</span><p>Horas</p></div>
+        <div><span id="minutos">00</span><p>Min</p></div>
+        <div><span id="segundos">00</span><p>Seg</p></div>
+      </div>
+    </div>
+  </section>
+</main>    
 
-                <div class="container conteudo-banner">
-                <div class="titulo-container">
-                    <h1 class="titulo">Copa do Mundo</h1>
-                    <h1 class="numero">2026</h1>
-                </div>
-                <div class="linha-destaque"></div>
-                    <p class="subtitulo">De 11 de junho a 19 de julho de 2026</p>
-                    <i class="bi bi-mouse-fill"></i>
-                    <div class="contador">
-                        <div><span id="dias">00</span><p>Dias</p></div>
-                        <div><span id="horas">00</span><p>Horas</p></div>
-                        <div><span id="minutos">00</span><p>Min</p></div>
-                        <div><span id="segundos">00</span><p>Seg</p></div>
-                    </div>
-                </div>
-        </section>
-    </main>    
-<!-- JS Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
-
-<section class="historia text-center">
-  <h1 class="titulo-história" id="historia" style="font-family: 'Lalezar', cursive; color: #fff; font-size: 70px; text-shadow: #ffc107 4px 4px 7px;">HISTÓRIA</h1>
+<section class="historia text-center" id="historia">
+  <h1 class="titulo-historia">HISTÓRIA</h1>
 
   <div class="linha-tempo">
-
     <div class="evento topo">
       <p>Primeira edição no Uruguai</p>
       <h2>1930</h2>
     </div>
-
     <div class="evento baixo">
       <h2>1942-1946</h2>
       <p>Torneio interrompido pela<br>Segunda Guerra Mundial</p>
     </div>
-
     <div class="evento topo">
       <p>"Milagre de Berna":<br>Vitória da Alemanha Ocidental</p>
       <h2>1954</h2>
     </div>
-
     <div class="evento baixo">
       <h2>1958</h2>
       <p>Primeiro título da<br>Seleção Brasileira</p>
     </div>
-
     <div class="evento topo">
       <p>Expansão para 32 seleções;<br>Título da França</p>
       <h2>1998</h2>
     </div>
-
     <div class="evento baixo">
       <h2>2026</h2>
       <p>Expansão prevista para 48 seleções</p>
     </div>
-
   </div>
 </section>
 
 <section class="calendario text-center" id="calendario">
-
-  <h1 class="titulo-calendario">
-    CALENDÁRIO | COPA DO MUNDO
-  </h1>
-
+  <h1 class="titulo-calendario">CALENDÁRIO | COPA DO MUNDO</h1>
   <div class="linha"></div>
 
   <div class="cards">
-
     <div class="card-cal">
-      <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">ABERTURA</h3>
-      <img src="img/logo.png">
-      <p><strong style="font-family: 'Josefin Sans', sans-serif;">JOGOS DE ABERTURA</strong></p>
-      <span style="font-family: 'Cabin', sans-serif;">DATA: 11 DE JUNHO 2026</span>
+      <h3 class="cal-title">ABERTURA</h3>
+      <img src="img/logo.png" alt="Abertura">
+      <p><strong>JOGOS DE ABERTURA</strong></p>
+      <span>DATA: 11 DE JUNHO 2026</span>
     </div>
 
     <div class="card-cal">
-      <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">OITAVAS DE FINAL</h3>
-      <img src="img/bolanumero16.png">
-      <p><strong style="font-family: 'Josefin Sans', sans-serif;">16 MELHORES SELEÇÕES</strong><br>JOGOS ELIMINATÓRIOS</p>
-      <span style="font-family: 'Cabin', sans-serif;">DATA: 28 JUN A 09 JUL 2026</span>
+      <h3 class="cal-title">OITAVAS</h3>
+      <img src="img/bolanumero16.png" alt="Oitavas">
+      <p><strong>16 MELHORES SELEÇÕES</strong><br>JOGOS ELIMINATÓRIOS</p>
+      <span>DATA: 28 JUN A 09 JUL 2026</span>
     </div>
 
     <div class="card-cal">
-      <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">QUARTAS DE FINAL</h3>
-      <img src="img/bolanumero08.png">
-      <p><strong style="font-family: 'Josefin Sans', sans-serif;">OITO MELHORES</strong><br>DUELOS DECISIVOS</p>
-      <span style="font-family: 'Cabin', sans-serif;">DATA: 4 A 5 DE JULHO 2026</span>
+      <h3 class="cal-title">QUARTAS</h3>
+      <img src="img/bolanumero08.png" alt="Quartas">
+      <p><strong>OITO MELHORES</strong><br>DUELOS DECISIVOS</p>
+      <span>DATA: 4 A 5 DE JULHO 2026</span>
     </div>
 
     <div class="card-cal">
-      <h3 style="font-family: 'Lalezar', cursive; font-size: 35px;">SEMIFINAL</h3>
-      <img src="img/arena_foto-removebg-preview.png">
-      <p><strong style="font-family: 'Josefin Sans', sans-serif;">QUATRO MELHORES</strong><br>CAMINHO PARA A FINAL</p>
-      <span style="font-family: 'Cabin', sans-serif;">DATA: 8 E 9 DE JULHO 2026</span>
+      <h3 class="cal-title">SEMIFINAL</h3>
+      <img src="img/arena_foto-removebg-preview.png" alt="Semifinal">
+      <p><strong>QUATRO MELHORES</strong><br>CAMINHO PARA A FINAL</p>
+      <span>DATA: 8 E 9 DE JULHO 2026</span>
     </div>
 
     <div class="card-cal destaque">
-      <h3 style="font-family: 'Lalezar', cursive; font-size: 35px; text-shadow: #ffc107 2px 2px 5px;">FINAL</h3>
-      <img src="img/logo.png">
-      <p><strong style="font-family: 'Josefin Sans', sans-serif;">GRANDE FINAL</strong></p>
-      <span style="font-family: 'Cabin', sans-serif;">DATA: 14 DE JULHO 2026</span>
+      <h3 class="cal-title final-title">FINAL</h3>
+      <img src="img/logo.png" alt="Final">
+      <p><strong>GRANDE FINAL</strong></p>
+      <span>DATA: 14 DE JULHO 2026</span>
     </div>
-
   </div>
-
 </section>
-<section class="equipes text-center" id="equipes">
 
+<section class="equipes text-center" id="equipes">
   <h1 class="titulo-equipes">EQUIPES</h1>
 
   <div class="cards-equipes">
-
-    <!-- América do Sul -->
     <div class="card-equipe">
-      <img src="img/america do sul.jpg">
+      <img src="img/america do sul.jpg" alt="América do Sul">
       <h3>América do Sul</h3>
       <ul>
         <li>Brasil</li>
@@ -186,10 +153,9 @@
       </ul>
     </div>
 
-    <!-- América do Norte -->
     <div class="card-equipe">
-      <img src="img/amercica do norte.jpg">
-       <h3>América do Norte, Central e Caribe</h3>
+      <img src="img/amercica do norte.jpg" alt="América do Norte">
+       <h3>América do Norte e Caribe</h3>
       <ul>
         <li>Estados Unidos</li>
         <li>Canadá</li>
@@ -200,23 +166,18 @@
       </ul>
     </div>
 
-    <!-- Oceania -->
     <div class="card-equipe">
-    
+      <img src="img/oceania.jpg" alt="Oceania">
       <h3>Oceania</h3>
       <ul>
-          <img src="img/oceania.jpg">
           <li>Nova Zelândia</li>
       </ul>
     </div>
 
-    
-    <!-- Europa -->
     <div class="card-equipe">
-    
+      <img src="img/mapa europa.jpg" alt="Europa">
       <h3>Europa</h3>
       <ul>
-          <img src="img/mapa europa.jpg">
           <li>Croácia</li>
           <li>Escócia</li>
           <li>Espanha</li>
@@ -236,12 +197,10 @@
       </ul>
     </div>
 
-      <!-- África -->
     <div class="card-equipe">
-    
+      <img src="img/mapa africa.jpg" alt="África">
       <h3>África</h3>
       <ul>
-          <img src="img/mapa africa.jpg">
           <li>África do Sul</li>
           <li>Argélia</li>
           <li>Cabo Verde</li>
@@ -252,45 +211,33 @@
           <li>RD do Congo</li>
           <li>Senegal</li>
           <li>Tunísia</li>
-          <li>Áustria</li>
-          <li>Alemanha</li>
-          <li>Bélgica</li>
-          <li>Bósnia e Herzegovina</li>
-          <li>Noruega</li>
-          <li>Suécia</li>
       </ul>
     </div>
 
-     <!-- Ásia -->
     <div class="card-equipe">
-    
+      <img src="img/mapa asia.jpg" alt="Ásia">
       <h3>Ásia</h3>
       <ul>
-          <img src="img/mapa asia.jpg">
-          <li>Arábia Saudita </li>
+          <li>Arábia Saudita</li>
           <li>Austrália</li>
           <li>Catar</li>
           <li>Iraque</li>
           <li>Japão</li>
           <li>Jordânia</li>
-          <li>República da Coreia</li>
+          <li>Rep. da Coreia</li>
           <li>RI do Irã</li>
           <li>Uzbequistão</li>
       </ul>
     </div>
-
   </div>
-
 </section>
 
 <section class="ingressos" id="ingressos">
-
   <h1 class="titulo-ingressos">INGRESSOS</h1>
 
   <div class="cards-ingressos">
-
     <div class="card-ingresso card-roxo">
-      <h3>Hospedagem+Ingresso</h3>
+      <h3>Hospedagem + Ingresso</h3>
       <p><span>Hotel</span></p>
       <p><span>Café da manhã</span></p>
       <p><span>Ingresso para o jogo</span></p>
@@ -316,78 +263,54 @@
       <p><span>O valor pode variar</span></p>
       <p><span>dependendo das datas/local</span></p>
     </div>
-
   </div>
-
 </section>
 
-<!-- Construindo slider "Carroussel" do zero -->
-     <div class="container mt-3">
-        <div id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                
-                <!-- Primeiro item do Carroussel -->
-                <div class="carousel-item active">
-                    <img src="img/carrossel 2.jpg" alt="slide-1" class="d-block w-100">
-                </div>
+<div class="w-100 p-0 m-0">
+  <div id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="img/carrossel 2.jpg" alt="slide-1" class="d-block w-100" style="object-fit: cover; max-height: 600px;">
+          </div>
+          <div class="carousel-item">
+              <img src="img/copa do mundo].webp" alt="slide-2" class="d-block w-100" style="object-fit: cover; max-height: 600px;">
+          </div>
+          <div class="carousel-item">
+              <img src="img/carrossel 3.jpg" alt="slide-3" class="d-block w-100" style="object-fit: cover; max-height: 600px;">
+          </div>
+      </div>
 
-                <!-- segundo item do Carroussel -->
-                <div class="carousel-item active">
-                    <img src="img/copa do mundo].webp" alt="slide-2" class="d-block w-100">
-                </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExemplo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExemplo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </button>
+  </div>
+</div>
 
-                <!-- terceiro item do Carroussel -->
-                <div class="carousel-item active">
-                    <img src="img/carrossel 3.jpg" alt="slide-3" class="d-block w-100">
-                </div>
-
-
-            </div>
-
-            <!-- Adicionando botôes de controle de carroussel -->
-
-
-            <!-- botão de retorno -->
-             <button class="carousel-control-prev" type="button" 
-             data-bs-target="#carouselExemplo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-             </button>
-
-            <!-- botão de avançar -->
-             <button class="carousel-control-next" type="button" 
-             data-bs-target="#carouselExemplo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-             </button>
-            
-
-        </div>
-     </div>
-     <footer class="rodape">
-
+<footer class="rodape">
   <div class="container-rodape">
-
     <h2>Copa do Mundo 2026</h2>
-
     <p>Site informativo sobre a Copa do Mundo</p>
-
     <div class="links">
-      <a href="#">História</a>
-      <a href="#">Calendário</a>
-      <a href="#">Equipes</a>
-      <a href="#">Ingressos</a>
+      <a href="#historia">História</a>
+      <a href="#calendario">Calendário</a>
+      <a href="#equipes">Equipes</a>
+      <a href="#ingressos">Ingressos</a>
     </div>
-
     <div class="redes">
       <i class="bi bi-instagram"></i>
       <i class="bi bi-twitter-x"></i>
       <i class="bi bi-youtube"></i>
     </div>
-
     <p class="copy">© 2026 Copa do Mundo - Todos os direitos reservados</p>
-
   </div>
-
 </footer>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/bootstrap.js"></script>
+
 </body>
 </html>

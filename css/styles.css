@@ -1,6 +1,7 @@
 /* Fonte global da página */
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Mudei 'Italic' porque não é um nome de fonte padrão */
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
 /* Navbar Amarela */
@@ -39,17 +40,19 @@ body {
 /* Botão Ingressos */
 .botao {
   background-color: #3c1dc4;
-  color: #000 !important; 
+  color: #fff !important; 
   padding: 0.6rem 1rem;
   border-radius: 5px;
   font-weight: 700;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  display: inline-block;
 }
 
 .botao:hover {
   background: linear-gradient(135deg, #ffc107, #3016a4);
+  color: #000 !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transform: translate(-2px) scale(1.05);
 }
@@ -75,22 +78,23 @@ body {
   font-size: 6rem;
   color: #fff;
   text-shadow: 2px 3px 3px #ffc107;
+  line-height: 1;
 }
 
 .numero {
   font-family: 'Lalezar', cursive;
   font-size: 6rem;
   color: #ffc107;
-  margin-top: -10px;
   text-shadow: 2px 3px 3px #fff;
+  line-height: 1;
 }
 
 .linha-destaque {
-  width: 600px;
+  max-width: 600px; /* Alterado para max-width */
+  width: 100%;
   height: 3px;
   background-color: #fff;
-  margin: 1rem auto;
-  margin-left: 0;
+  margin: 1rem 0;
 }
 
 .subtitulo {
@@ -98,15 +102,13 @@ body {
   font-size: 1.8rem;
   color: #fff;
   margin-bottom: 2rem;
-  text-shadow: 1.5px 3px 3px #000;
   text-align: left;
   text-shadow: 2px 3px 3px #ffc107;
 }
 
-
 .contador {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: flex-start;
   margin-top: 2rem;
   flex-wrap: wrap; 
@@ -118,7 +120,8 @@ body {
   border: 2px solid #ffc107; 
   border-radius: 15px; 
   padding: 15px 20px;
-  min-width: 120px; 
+  flex: 1 1 100px; /* Flexível */
+  max-width: 150px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
   transition: transform 0.3s ease; 
@@ -130,7 +133,7 @@ body {
 }
 
 .contador span {
-  font-size: 3.5rem;
+  font-size: 3rem; /* Reduzido levemente */
   font-weight: 900;
   color: #ffc107; 
   display: block;
@@ -140,7 +143,7 @@ body {
 
 .contador p {
   margin: 10px 0 0 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: 'Lalezar', cursive; 
   color: #fff; 
   text-transform: uppercase; 
@@ -150,23 +153,18 @@ body {
 /* === SEÇÃO DE HISTÓRIA E LINHA DO TEMPO === */
 #historia {
   scroll-margin-top: 100px;
-  /* min-height: 30vh; */
-  padding: 30px 20px 0 20px;
-}
-
-.historia {
-  background: linear-gradient(#f5e6a1, #e8d48a);
   padding: 60px 20px;
-
+  background: linear-gradient(#f5e6a1, #e8d48a);
 }
 
 .titulo-historia {
-  font-weight: 900;
+  font-family: 'Lalezar', cursive;
+  color: #fff;
+  font-size: 70px;
+  text-shadow: #ffc107 4px 4px 7px;
   margin-bottom: 60px;
-  
 }
 
-/* Afastando a linha do título para não sobrepor (O que arrumou 1954) */
 .linha-tempo { 
   position: relative;
   display: flex;
@@ -174,9 +172,11 @@ body {
   align-items: center;
   margin-top: 120px; 
   margin-bottom: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* A Linha Horizontal Principal + Sombra Amarela */
 .linha-tempo::before {
   content: "";
   position: absolute;
@@ -186,34 +186,24 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  box-shadow: 0px 5px 12px 3px #ffc107; /* Sombra amarela intensa! */
+  box-shadow: 0px 5px 12px 3px #ffc107; 
 }
 
-/* Ajuste de tamanho para caber o ano inteiro */
 .evento {
-  width: 180px; 
+  width: 160px; 
   position: relative;
 }
 
 .evento h2 {
   font-weight: 900;
-  white-space: nowrap; /* Impede o "1942-1946" de quebrar de linha */
+  white-space: nowrap; 
 }
 
-.topo {
-  transform: translateY(-80px);
-}
+.topo { transform: translateY(-80px); }
+.baixo { transform: translateY(80px); }
 
-.baixo {
-  transform: translateY(80px);
-}
+.evento.baixo h2 { margin-top: 20px; }
 
-/* Margem separada para corrigir erro antigo de sintaxe */
-.evento.baixo h2 {
-  margin-top: 20px;
-}
-
-/* Marcadores verticais da linha do tempo + Sombra Amarela */
 .evento::after {
   content: "";
   position: absolute;
@@ -222,22 +212,16 @@ body {
   background: black;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0px 3px 8px 1px #ffc107; /* Acompanhando a linha principal */
+  box-shadow: 0px 3px 8px 1px #ffc107; 
 }
 
-.topo::after {
-  top: 100%;
-}
-
-.baixo::after {
-  bottom: 100%;
-}
+.topo::after { top: 100%; }
+.baixo::after { bottom: 100%; }
 
 /* === SEÇÃO DE CALENDÁRIO === */
 .calendario {
   background: #ffcc00;
   padding: 60px 20px;
-  /* margin-top: ;20px; */
 }
 
 .titulo-calendario {
@@ -251,6 +235,7 @@ body {
 
 .linha {
   width: 60%;
+  max-width: 300px;
   height: 4px;
   background: #0b2c8a;
   margin: 10px auto 40px;
@@ -266,19 +251,23 @@ body {
 
 .card-cal {
   background: #eaeaea;
-  width: 200px;
+  width: 100%;
+  max-width: 220px;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-cal h3 {
+.cal-title {
+  font-family: 'Lalezar', cursive; 
+  font-size: 30px;
   color: #0b2c8a;
   border-bottom: 3px solid #0b2c8a;
   padding-bottom: 10px;
-  font-weight: 900;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.final-title { text-shadow: #ffc107 2px 2px 5px; }
 
 .card-cal:hover {
   transform: translateY(-10px);
@@ -292,18 +281,17 @@ body {
 
 .card-cal p {
   font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .card-cal span {
   font-size: 12px;
+  font-family: 'Cabin', sans-serif;
 }
 
-.destaque {
-  background: #f5f0d0;
-}
+.destaque { background: #f5f0d0; }
 
-/* Seção de Equipes */
-
+/* === SEÇÃO EQUIPES === */
 .equipes {
   background: #0b2c8a;
   padding: 60px 20px;
@@ -312,19 +300,21 @@ body {
 .titulo-equipes {
   color: white;
   font-weight: 900;
+  font-size: 50px;
   margin-bottom: 50px;
 }
 
 .cards-equipes {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .card-equipe {
   background: #d4af37;
-  width: 250px;
+  width: 100%;
+  max-width: 280px;
   border-radius: 20px;
   padding: 20px;
   text-align: left;
@@ -339,6 +329,8 @@ body {
 
 .card-equipe img {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -346,6 +338,7 @@ body {
 .card-equipe h3 {
   font-weight: 900;
   margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .card-equipe ul {
@@ -354,10 +347,11 @@ body {
 }
 
 .card-equipe li {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 5px 0;
 }
 
+/* === SEÇÃO INGRESSOS === */
 .ingressos {
   background: #eaeaea;
   padding: 80px 20px;
@@ -370,60 +364,56 @@ body {
   margin-bottom: 60px;
 }
 
-/* GRID DOS CARDS Ingressos */
-
 .cards-ingressos {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
-  gap: 60px;
-  justify-content: center;
+  /* Cria colunas que se adaptam automaticamente ao tamanho da tela */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* CARD PADRÃO */
 .card-ingresso {
   background: #0b2c8a;
   color: white;
   border-radius: 20px;
   padding: 40px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* CARD ROXO (PRIMEIRO) */
 .card-roxo {
   background: linear-gradient(135deg, #5f5fff, #3c3ccf);
 }
 
-/* TÍTULOS */
 .card-ingresso h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
-/* TEXTOS */
 .card-ingresso p {
   font-size: 18px;
   margin: 10px 0;
 }
 
-/* LINHA EMBAIXO DOS TEXTOS */
 .card-ingresso p span {
   border-bottom: 2px solid white;
   padding-bottom: 3px;
 }
 
-/* PREÇO */
 .preco {
   font-size: 22px;
   font-weight: 900;
   margin-top: 30px;
 }
 
-/* TEXTO PEQUENO */
 .obs {
   font-size: 14px;
   margin-top: 10px;
   opacity: 0.8;
 }
+
+/* === RODAPÉ === */
 .rodape {
   background: #0b2c8a;
   color: white;
@@ -431,49 +421,89 @@ body {
   text-align: center;
 }
 
-.container-rodape h2 {
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.container-rodape p {
-  margin: 5px 0;
-}
-
-/* LINKS */
-.links {
-  margin: 20px 0;
-}
-
+.container-rodape h2 { font-weight: 900; margin-bottom: 10px; }
+.links { margin: 20px 0; }
 .links a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
   font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
 }
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-/* REDES SOCIAIS */
-.redes {
-  margin: 20px 0;
-}
-
+.links a:hover { text-decoration: underline; }
+.redes { margin: 20px 0; }
 .redes i {
   font-size: 22px;
   margin: 0 10px;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+.redes i:hover { transform: scale(1.2); }
+.copy { font-size: 14px; opacity: 0.7; margin-top: 20px; }
+
+
+/* =========================================================
+   MEDIA QUERIES - GARANTINDO 100% DE RESPONSIVIDADE 
+========================================================= */
+
+@media (max-width: 992px) {
+  .titulo { font-size: 4.5rem; }
+  .numero { font-size: 4.5rem; }
+  .botao { text-align: center; display: block; margin-top: 10px; }
 }
 
-.redes i:hover {
-  transform: scale(1.2);
+@media (max-width: 768px) {
+  /* Títulos e Textos Gerais */
+  .titulo { font-size: 3.5rem; }
+  .numero { font-size: 3.5rem; }
+  .subtitulo { font-size: 1.2rem; }
+  .titulo-historia { font-size: 50px; }
+  .titulo-calendario, .titulo-ingressos, .titulo-equipes { font-size: 35px; }
+
+  .contador div {
+    padding: 10px;
+    min-width: 80px;
+  }
+  .contador span { font-size: 2rem; }
+  .contador p { font-size: 0.8rem; }
+
+  /* Adaptando a Linha do Tempo para a Vertical no Celular */
+  .linha-tempo {
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+  
+  /* Linha mestra vira vertical */
+  .linha-tempo::before {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .evento {
+    width: 80%;
+    transform: none !important; /* Reseta as subidas/descidas */
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 2; /* Fica acima da linha */
+  }
+
+  .evento.baixo h2 { margin-top: 0; }
+  
+  /* Esconde os marcadores verticais no mobile */
+  .evento::after { display: none; } 
 }
 
-/* COPYRIGHT */
-.copy {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-top: 20px;
+@media (max-width: 480px) {
+  .titulo { font-size: 2.8rem; }
+  .numero { font-size: 2.8rem; }
+  .card-equipe img { height: 120px; }
+  .cal-title { font-size: 24px; }
 }
